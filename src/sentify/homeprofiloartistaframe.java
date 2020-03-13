@@ -40,7 +40,7 @@ public class homeprofiloartistaframe extends JFrame {
 		JButton btnImp = new JButton("Imp.");
 		btnImp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				c3.impostazioni();
+				c3.impostazioni(B);
 			}
 		});
 		btnImp.setBounds(362, 10, 64, 21);
@@ -50,12 +50,15 @@ public class homeprofiloartistaframe extends JFrame {
 		lblNomeArtista.setFont(new Font("Candara", Font.PLAIN, 16));
 		lblNomeArtista.setBounds(34, 13, 121, 19);
 		contentPane.add(lblNomeArtista);
-		lblNomeArtista.setName(B.getNome());
+		lblNomeArtista.setText(c3.getA().getNome());
+		
 		
 		JLabel lblNumFollower = new JLabel("Num. follower");
 		lblNumFollower.setFont(new Font("Candara", Font.PLAIN, 13));
 		lblNumFollower.setBounds(34, 26, 121, 21);
 		contentPane.add(lblNumFollower);
+		String NumFollower = String.valueOf(c3.getA().getNumFollowers());
+		lblNumFollower.setText(NumFollower);
 		
 		JLabel lblBiografia = new JLabel("Biografia");
 		lblBiografia.setFont(new Font("Candara", Font.PLAIN, 16));
@@ -66,6 +69,7 @@ public class homeprofiloartistaframe extends JFrame {
 		lblTestoBio.setFont(new Font("Candara", Font.PLAIN, 13));
 		lblTestoBio.setBounds(34, 84, 79, 21);
 		contentPane.add(lblTestoBio);
+		lblTestoBio.setText(c3.getA().getBiografia());
 		
 		JLabel lblAlbum = new JLabel("Album");
 		lblAlbum.setFont(new Font("Candara", Font.PLAIN, 16));

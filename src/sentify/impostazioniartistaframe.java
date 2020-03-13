@@ -98,10 +98,11 @@ public class impostazioniartistaframe extends JFrame {
 		JButton btnNewButton_1 = new JButton(">Retribuzione");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int follower = C.getNumFollowers();
+				int follower = c4.getA().getNumFollowers();
 				double paga = (0.50 * follower);
-				String tmp = paga.toString;
-				JOptionPane.showMessageDialog("null", paga);
+				String ret = Double.toString(paga);
+				JOptionPane.showMessageDialog(null, "In base al numero di followers la sua retribuzione ammonta a: "+ret+"euro");
+				
 			}
 		});
 		btnNewButton_1.setFont(new Font("Candara", Font.PLAIN, 14));

@@ -49,7 +49,7 @@ public class ArtistaDAO extends Artista{
 
     public Artista LoginDAO(String username, String password) {
       ResultSet result;
-      Artista A = new Artista();
+      Artista A;
       
       String query = "select * from artista where username=? and password=?";
       
@@ -59,17 +59,16 @@ public class ArtistaDAO extends Artista{
         pst.setString(1,username);
         pst.setString(2, password);
         result = pst.executeQuery();
-        if(result.next()) {
         
+          A = new Artista();
           while(result.next()) {
         	  A.setNome(result.getString(1));
-              A.setNumFollowers(result.getInt(6));
+              A.setNumFollowers(result.getInt("numFollower"));
               A.setUsername(result.getString(9));
               A.setPassword(result.getString(10)); 
           }
           return A;
-      }
-          else return null;
+      
       } catch (SQLException e) {
         e.printStackTrace(); 
         
