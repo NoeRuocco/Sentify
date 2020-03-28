@@ -18,10 +18,7 @@ public class logoframe extends JFrame {
 	private JPanel contentPane;
 
 
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public logoframe(Controller c) {
 		Controller c1 = c;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,6 +28,7 @@ public class logoframe extends JFrame {
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 		
 		JLabel lblSentify = new JLabel("Sentify");

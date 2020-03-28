@@ -64,8 +64,9 @@ public class ArtistaDAO extends Artista{
           while(result.next()) {
         	  A.setNome(result.getString(1));
               A.setNumFollowers(result.getInt("numFollower"));
-              A.setUsername(result.getString(9));
-              A.setPassword(result.getString(10)); 
+              A.setBiografia(result.getString(2));
+              A.setUsername(result.getString(8));
+              A.setPassword(result.getString(9)); 
           }
           return A;
       
@@ -74,6 +75,8 @@ public class ArtistaDAO extends Artista{
         
         return null;
         }
+      
+
       
       
 

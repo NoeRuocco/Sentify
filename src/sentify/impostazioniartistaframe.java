@@ -20,18 +20,16 @@ public class impostazioniartistaframe extends JFrame {
 	private JPanel contentPane;
  
 
-	/**
-	 * Create the frame.
-	 */
-	public impostazioniartistaframe(Controller c, Artista A) {
+	
+	public impostazioniartistaframe(Controller c) {
 		Controller c4 = c;
-		Artista C = new Artista(A.getNumFollowers());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 204, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 		
 		JButton button = new JButton("< Indietro");
@@ -49,7 +47,7 @@ public class impostazioniartistaframe extends JFrame {
 		txtpnAccount.setEditable(false);
 		txtpnAccount.setBackground(new Color(204, 204, 255));
 		txtpnAccount.setFont(new Font("Candara", Font.PLAIN, 14));
-		txtpnAccount.setText(">Account                                                                                                             ");
+		txtpnAccount.setText(">Account");
 		txtpnAccount.setBounds(20, 39, 393, 19);
 		contentPane.add(txtpnAccount);
 		
@@ -110,6 +108,18 @@ public class impostazioniartistaframe extends JFrame {
 		btnNewButton_1.setHorizontalAlignment(SwingConstants.LEFT);
 		btnNewButton_1.setBounds(20, 171, 393, 21);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btngestisciBrani = new JButton(">Gestisci brani");
+		btngestisciBrani.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				c4.GestisciBrani();
+			}
+		});
+		btngestisciBrani.setHorizontalAlignment(SwingConstants.LEFT);
+		btngestisciBrani.setFont(new Font("Candara", Font.PLAIN, 14));
+		btngestisciBrani.setBackground(new Color(204, 204, 255));
+		btngestisciBrani.setBounds(20, 201, 393, 21);
+		contentPane.add(btngestisciBrani);
 	}
-
 }
+

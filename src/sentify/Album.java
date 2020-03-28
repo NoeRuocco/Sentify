@@ -1,15 +1,15 @@
 package sentify;
 
 public class Album {
-		public String Titolo;
-		public String Artista;
-		public String NumCanzoni;
-		public String Durata;
-		public String Tipo;
-		public String AnnoPubblicazione;
-		public int CodAlb;
-		public int CodBra;
-		public String Genere;
+		private String Titolo;
+		private String Artista;
+		private String NumCanzoni;
+		private String Durata;
+		private String Tipo;
+		private String AnnoPubblicazione;
+		private int CodAlb;
+		private int CodBra;
+		private String Genere;
 		
 		public Album(String tit, String art, String numCan, String dur, String tip, String annPubb, 
 					 int codAlb, int codBra, String gen){
@@ -22,6 +22,10 @@ public class Album {
 			setCodAlb(codAlb);
 			setCodBra(codBra);
 			setGenere(gen);
+		}
+		
+		public Album() {
+			
 		}
 		
 		public String getTitolo() {

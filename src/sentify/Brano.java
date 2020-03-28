@@ -1,20 +1,33 @@
 package sentify;
 
 public class Brano {
-	public String Titolo;
-	public String Durata;
-	public String Artista;
-	public String Album;
-	public int CodBra;
-	public int CodAlb;
+	private String Titolo;
+	private String Durata;
+	private String Artista;
+	private String Album;
+	private String Genere;
+	private int CodBra;
+	private int CodAlb;
 	
-	public Brano(String tit, String dur, String art, String alb, int codBra, int codAlb){
+	public Brano(String tit, String dur, String art, String alb, String gen, int codBra, int codAlb){
 		setTitolo(tit);
 		setDurata(dur);
 		setArtista(art);
 		setAlbum(alb);
+		setGenere(gen);
 		setCodBra(codBra);
 		setCodAlb(codAlb);
+	}
+	
+
+	public Brano(String tit, String dur,String gen){
+		setTitolo(tit);
+		setDurata(dur);
+		setGenere(gen);
+	}
+	
+	public Brano() {
+		
 	}
 	
 	public String getTitolo() {
@@ -40,6 +53,12 @@ public class Brano {
 	}
 	public void setAlbum(String alb) {
 		Album = alb;
+	}
+	public String getGenere() {
+		return Genere;
+	}
+	public void setGenere(String gen) {
+		Genere = gen;
 	}
 	public int getCodBra() {
 		return CodBra;

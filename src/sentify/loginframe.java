@@ -23,9 +23,6 @@ public class loginframe extends JFrame {
 
 
 
-	/**
-	 * Create the frame.
-	 */
 	public loginframe(Controller c) {
 		Controller c2 = c;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +31,7 @@ public class loginframe extends JFrame {
 		contentPane.setBackground(new Color(204, 204, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 		
 		JTextPane txtpnUsername = new JTextPane();

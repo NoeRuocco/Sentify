@@ -23,18 +23,16 @@ public class homeprofiloartistaframe extends JFrame {
 	private JPanel contentPane;
 	private Artista B;
 
-	/**
-	 * Create the frame.
-	 */
-	public homeprofiloartistaframe(Controller c, Artista A) {
+	
+	public homeprofiloartistaframe(Controller c) {
 		Controller c3 = c;
-		Artista B = new Artista(A.getNome(), A.getBiografia(), A.getNumFollowers(), A.getCodAlb(), A.getCodBra());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 468);
+		setBounds(100, 100, 438, 338);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 204, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 		
 		JButton btnImp = new JButton("Imp.");
@@ -43,7 +41,7 @@ public class homeprofiloartistaframe extends JFrame {
 				c3.impostazioni(B);
 			}
 		});
-		btnImp.setBounds(362, 10, 64, 21);
+		btnImp.setBounds(348, 9, 64, 21);
 		contentPane.add(btnImp);
 		
 		JLabel lblNomeArtista = new JLabel("Nome");
@@ -62,23 +60,38 @@ public class homeprofiloartistaframe extends JFrame {
 		
 		JLabel lblBiografia = new JLabel("Biografia");
 		lblBiografia.setFont(new Font("Candara", Font.PLAIN, 16));
-		lblBiografia.setBounds(34, 67, 112, 21);
+		lblBiografia.setBounds(34, 70, 112, 21);
 		contentPane.add(lblBiografia);
 		
 		JLabel lblTestoBio = new JLabel("Testo bio. ");
 		lblTestoBio.setFont(new Font("Candara", Font.PLAIN, 13));
-		lblTestoBio.setBounds(34, 84, 79, 21);
+		lblTestoBio.setBounds(34, 84, 349, 51);
 		contentPane.add(lblTestoBio);
 		lblTestoBio.setText(c3.getA().getBiografia());
 		
 		JLabel lblAlbum = new JLabel("Album");
 		lblAlbum.setFont(new Font("Candara", Font.PLAIN, 16));
-		lblAlbum.setBounds(34, 171, 79, 21);
+		lblAlbum.setBounds(34, 147, 84, 21);
 		contentPane.add(lblAlbum);
 		
 		JLabel lblBrani = new JLabel("Brani");
 		lblBrani.setFont(new Font("Candara", Font.PLAIN, 16));
-		lblBrani.setBounds(34, 264, 46, 26);
+		lblBrani.setBounds(33, 220, 46, 26);
 		contentPane.add(lblBrani);
+		
+		JLabel lblBrano = new JLabel("Brano");
+		lblBrano.setBounds(34, 167, 335, 41);
+		
+		String Album = c3.ShowAlbum();
+		lblBrano.setText(Album);
+		contentPane.add(lblBrano);
+		
+		JLabel lblBrano_1 = new JLabel("Brano");
+		lblBrano_1.setBounds(34, 243, 349, 41);
+		
+		String Brani = c3.ShowBrani();
+		lblBrano_1.setText(Brani);
+		contentPane.add(lblBrano_1);
 	}
 }
+

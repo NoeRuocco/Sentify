@@ -1,7 +1,5 @@
 package sentify;
 
-/** AGGIUNGERE METODO PER LA RETRIBUZIONE ALLA FINE */
-
 public class Artista extends Utente{
 		private String Username;
 		private String Password;
@@ -123,7 +121,7 @@ public class Artista extends Utente{
 			CodAlb = codBra;
 		}
 		
-		
+		//Retribuzione in base al numero di follower dell'artista
 		public double retribuzione(int NumFollowers, double paga) {
 			paga = (0.50 * NumFollowers);
 			return paga;
